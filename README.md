@@ -22,3 +22,11 @@ somme = c1×1 + c2×3 + c3×1 + c4×3 + c5×1 + c6×3 + c7×1
 reste = somme % 10
 
 chiffre_control = (10 - reste) % 10
+
+
+
+Chiffres :   1   2   3   4   5   6   7
+Poids :      1   3   1   3   1   3   1
+Produits :   1   6   3  12   5  18   7
+  Additionner tous les produits :
+  1+6+3+12+5+18+7=52
