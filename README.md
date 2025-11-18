@@ -8,7 +8,7 @@ Le programme demande la taille n du tableau T1
 
 Chaque élément de T1 est une chaîne de 7 chiffres
 
-Le premier chiffre de chaque chaîne peut apparaître au maximum 2 fois dans tout le tableau
+Le premier chiffre de chaque chaîne peut apparaître au maximum 2 fois dans tout la chaine
 
 Calcul du chiffre de contrôle selon l'algorithme tunisien
 
