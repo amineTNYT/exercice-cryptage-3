@@ -1,32 +1,42 @@
 # exercice-cryptage-3
 
 # Énoncé du problème
-Créez un programme qui génère des Codes d'Identification Nationaux (CIN) tunisiens avec les règles suivantes :
 
-Contraintes
-Le programme demande la taille n du tableau T1
+Créez un programme qui vérifie la validité des Codes d'Identification Nationaux (CIN) tunisiens.
 
-Chaque élément de T1 est une chaîne de 7 chiffres
+Algorithme de vérification :
+Pour un CIN de 8 chiffres : c1 c2 c3 c4 c5 c6 c7 c8
 
-Le premier chiffre de chaque chaîne peut apparaître au maximum 2 fois dans tout la chaine
+Appliquer les poids : 1, 3, 1, 3, 1, 3, 1 aux 7 premiers chiffres
 
-Calcul du chiffre de contrôle selon l'algorithme tunisien
+Calculer : somme = c1×1 + c2×3 + c3×1 + c4×3 + c5×1 + c6×3 + c7×1
 
-Algorithme de calcul du chiffre de contrôle
-Pour une chaîne c1 c2 c3 c4 c5 c6 c7 :
+Calculer : reste = somme % 10
 
-Appliquer les poids : 1, 3, 1, 3, 1, 3, 1
+Calculer : chiffre_control = (10 - reste) % 10
 
-somme = c1×1 + c2×3 + c3×1 + c4×3 + c5×1 + c6×3 + c7×1
+Le CIN est valide si c8 = chiffre_control
 
-reste = somme % 10
+Le programme utilise :
 
-chiffre_control = (10 - reste) % 10
+Un tableau t pour stocker les CIN saisis
 
+Un tableau cin pour stocker les résultats ("valider" ou "faux")
 
+Le programme doit :
 
-Chiffres :   1   2   3   4   5   6   7
-Poids :      1   3   1   3   1   3   1
-Produits :   1   6   3  12   5  18   7
-  Additionner tous les produits :
-  1+6+3+12+5+18+7=52
+Saisir plusieurs CIN dans le tableau t
+
+Vérifier chaque CIN selon l'algorithme
+
+Afficher "valider" ou "faux" pour chaque CIN dans le tableau cin
+# example
+
+ajouter une cin pour verifier O/N= O
+t[0]= 78452141
+ajouter une cin pour verifier O/N= O
+t[1]= 12345678  
+ajouter une cin pour verifier O/N= O
+t[2]= 78452147
+ajouter une cin pour verifier O/N= N
+valider | valider | faux |
