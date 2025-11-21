@@ -36,9 +36,11 @@ Pour le CIN : **78452141**
 | 4 × 1 = | 4     |
 
 **Somme** = 7 + 24 + 4 + 15 + 2 + 3 + 4 = **59**  
+
 **Reste** = 59 % 10 = **9**  
 **Chiffre contrôle** = (10 - 9) % 10 = **1**
 
 ✅ **Résultat** : CIN valide (le 8ème chiffre est bien 1)
 
-### Exécution du programme
+[annoncer de problem.xlsx](https://github.com/user-attachments/files/23683895/annoncer.de.problem.xlsx)
+
