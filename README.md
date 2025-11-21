@@ -1,42 +1,44 @@
-# exercice-cryptage-3
+# Vérification des CIN Tunisiens
 
-# Énoncé du problème
+## Problème
 
-Créez un programme qui vérifie la validité des Codes d'Identification Nationaux (CIN) tunisiens.
+Créez un programme qui vérifie la validité des Codes d'Identification Nationaux (CIN) tunisiens selon l'algorithme officiel.
 
-Algorithme de vérification :
-Pour un CIN de 8 chiffres : c1 c2 c3 c4 c5 c6 c7 c8
+### Algorithme de vérification
 
-Appliquer les poids : 1, 3, 1, 3, 1, 3, 1 aux 7 premiers chiffres
+Pour un CIN composé de 8 chiffres : **c1 c2 c3 c4 c5 c6 c7 c8**
 
-Calculer : somme = c1×1 + c2×3 + c3×1 + c4×3 + c5×1 + c6×3 + c7×1
+1. **Appliquer les poids** : 1, 3, 1, 3, 1, 3, 1 aux 7 premiers chiffres
+2. **Calculer** : `somme = c1×1 + c2×3 + c3×1 + c4×3 + c5×1 + c6×3 + c7×1`
+3. **Calculer** : `reste = somme % 10`
+4. **Calculer** : `chiffre_control = (10 - reste) % 10`
+5. **Le CIN est valide si** : `c8 = chiffre_control`
 
-Calculer : reste = somme % 10
+### Structures de données
 
-Calculer : chiffre_control = (10 - reste) % 10
+- **Tableau t** : stocke les CIN saisis par l'utilisateur 
+- **Tableau cin** : stocke les résultats de validation ("valider" ou "faux")
 
-Le CIN est valide si c8 = chiffre_control
+## Exemple
 
-Le programme utilise :
+### Calcul détaillé
 
-Un tableau t pour stocker les CIN saisis
+Pour le CIN : **78452141**
 
-Un tableau cin pour stocker les résultats ("valider" ou "faux")
+| Chiffre | Poids | Produit |
+|---------|-------|---------|
+| 7 × 1 = | 7     |
+| 8 × 3 = | 24    |
+| 4 × 1 = | 4     |
+| 5 × 3 = | 15    |
+| 2 × 1 = | 2     |
+| 1 × 3 = | 3     |
+| 4 × 1 = | 4     |
 
-Le programme doit :
+**Somme** = 7 + 24 + 4 + 15 + 2 + 3 + 4 = **59**  
+**Reste** = 59 % 10 = **9**  
+**Chiffre contrôle** = (10 - 9) % 10 = **1**
 
-Saisir plusieurs CIN dans le tableau t
+✅ **Résultat** : CIN valide (le 8ème chiffre est bien 1)
 
-Vérifier chaque CIN selon l'algorithme
-
-Afficher "valider" ou "faux" pour chaque CIN dans le tableau cin
-# example
-
-ajouter une cin pour verifier O/N= O
-t[0]= 78452141
-ajouter une cin pour verifier O/N= O
-t[1]= 12345678  
-ajouter une cin pour verifier O/N= O
-t[2]= 78452147
-ajouter une cin pour verifier O/N= N
-valider | valider | faux |
+### Exécution du programme
