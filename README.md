@@ -6,7 +6,7 @@ Créez un programme qui vérifie la validité des Codes d'Identification Nationa
 
 ### Algorithme de vérification
 
-Pour un CIN composé de 8 chiffres : **c1 c2 c3 c4 c5 c6 c7 c8**
+Pour un<code style="color : red">CIN</code>  composé de 8 chiffres : **c1 c2 c3 c4 c5 c6 c7 c8**
 
 1. **Appliquer les poids** : 1, 3, 1, 3, 1, 3, 1 aux 7 premiers chiffres
 2. **Calculer** : `somme = c1×1 + c2×3 + c3×1 + c4×3 + c5×1 + c6×3 + c7×1`
