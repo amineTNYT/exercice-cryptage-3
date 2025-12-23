@@ -1,5 +1,5 @@
 from numpy import array
-def remplir(t):
+def remplir1(t):
 	R=input("ajouter une cin pour verifier O/N= ")
 	i=0
 	while R.upper()=="O":
@@ -9,15 +9,12 @@ def remplir(t):
 	n=i
 	return(n)
 	
-
-
 	
 def verif(x):
-    ch = str(x)
-    
+    ch = str(x) 
     s1=0
     s2=0
-    for i in range(len(ch)-1):  # range(7) - correct
+    for i in range(len(ch)-1):  # range(7) 
         if i % 2 == 0:
             s1 = s1 + int(ch[i]) * 1  # Accumuler dans s
         else:
@@ -48,7 +45,8 @@ def affichage(cin,n):
 
 #programme.principale
 t=array([int]*100)
-n=remplir(t)
+n=remplir1(t)
 cin=array([str]*n)
 x=remplir2(t,n,cin)
 affichage(cin,x)
+
